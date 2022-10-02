@@ -1,16 +1,13 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 
 // Page Component
 import Index from './Index';
 
-function Router() {
-    return (
-        <HashRouter>
-            <Routes>
-                <Route path="/" element={<Index />} />
-            </Routes>
-        </HashRouter>
-    );
-}
+const router = createHashRouter([
+    {
+        path: '/',
+        element: <Index />,
+    },
+]);
 
-export default Router;
+export default router;
